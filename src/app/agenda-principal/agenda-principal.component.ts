@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AgendaService } from '../servicios/agenda.service';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @Component({
