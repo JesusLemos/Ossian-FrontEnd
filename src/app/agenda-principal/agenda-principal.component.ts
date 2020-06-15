@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Agenda } from '../agenda.model';
+
+import { AgendaService } from '../servicios/agenda.service';
 
 
 @Component({
@@ -9,9 +10,17 @@ import { Agenda } from '../agenda.model';
 })
 export class AgendaPrincipalComponent implements OnInit {
 
-  constructor() { }
+ public todosContactos = [];
 
-  ngOnInit(): void {
+
+  constructor(private agenda:AgendaService) { }
+
+  obtenerTodos(){
+    this.agenda.obtenerTodos().subscribe(usuario => JSON.parse(this.todosContactos = usuario));
   }
+  ngOnInit(): void {
+    this.obtenerTodos();
+  }
+
 
 }
