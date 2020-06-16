@@ -1,17 +1,24 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AgendaPrincipalComponent } from './agenda-principal/agenda-principal.component';
+import { DetalleusuarioComponent } from './detalleusuario/detalleusuario.component';
+
 
 const routes: Routes = [
 
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/contactos',
     pathMatch: 'full',
   },
   {
-    path: 'home' ,
+    path: 'contactos' ,
     component: AgendaPrincipalComponent
+
+  },
+  {
+    path: 'contactos/:id' ,
+    component: DetalleusuarioComponent
 
   }
 

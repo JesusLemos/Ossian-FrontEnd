@@ -1,0 +1,11 @@
+<div>
+    <form (submit)="actualizarUsuario()" #form="ngForm">
+        <input type="text" value='{{ usuario.nombre }}' [(ngModel)]="usuario.nombre" [ngModelOptions]="{standalone: true}"/>
+        <input value='{{ usuario.apellido }}' [(ngModel)]="usuario.apellido" [ngModelOptions]="{standalone: true}" />
+        <input value='{{ usuario.telefono }}'  [(ngModel)]="usuario.telefono" [ngModelOptions]="{standalone: true}" />
+        <input value='{{ usuario.correo }}' [(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}" />
+    
+        <button>Actualizar</button>
+    </form>
+
+</div>

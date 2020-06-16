@@ -12,5 +12,11 @@ export class AgendaService {
 
     return this.http.get('http://localhost:3000/agenda/obtenertodos');
   }
-
+  obtenerUsuario(id:number):Observable<any>{
+    return this.http.get('http://localhost:3000/agenda/usuario/'+id);
+  }
+  actualizarUsuario(usuario , id){
+    console.log(usuario , id);
+    return this.http.patch('http://localhost:3000/agenda/update/'+id, usuario)
+  }
 }

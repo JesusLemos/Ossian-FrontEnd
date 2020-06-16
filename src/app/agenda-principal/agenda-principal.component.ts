@@ -17,7 +17,7 @@ export class AgendaPrincipalComponent implements OnInit {
   constructor(private agenda: AgendaService) { }
 
   obtenerTodos(){
-    this.agenda.obtenerTodos().subscribe(usuario => JSON.parse(this.todosContactos = usuario));
+    this.agenda.obtenerTodos().subscribe(usuario =>this.todosContactos = usuario);
   }
   ngOnInit(): void {
     this.obtenerTodos();
