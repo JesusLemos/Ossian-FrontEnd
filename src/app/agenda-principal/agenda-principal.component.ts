@@ -11,6 +11,7 @@ import { AgendaService } from '../servicios/agenda.service';
 })
 export class AgendaPrincipalComponent implements OnInit {
 
+  img = 'assets/perfil.jpeg';
  public todosContactos = [];
 
 
