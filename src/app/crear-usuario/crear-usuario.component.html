@@ -1,0 +1,12 @@
+<div>
+    <form  #form="ngForm">
+        <input type="text"  [(ngModel)]="usuario.nombre" [ngModelOptions]="{standalone: true}"/>
+        <input  [(ngModel)]="usuario.apellido" [ngModelOptions]="{standalone: true}" />
+        <input  [(ngModel)]="usuario.telefono" [ngModelOptions]="{standalone: true}" />
+        <input  [(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}" />
+    
+         <button (click)="crearUsuario()">Crear</button>
+        
+    </form>
+
+</div>

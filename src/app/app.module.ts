@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { HeaderComponent } from './header/header.component';
 import { DetalleusuarioComponent } from './detalleusuario/detalleusuario.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
 
 
 
@@ -18,7 +19,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AppComponent,
     AgendaPrincipalComponent,
     HeaderComponent,
-    DetalleusuarioComponent
+    DetalleusuarioComponent,
+    CrearUsuarioComponent
   ],
   imports: [
     BrowserModule,
