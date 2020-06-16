@@ -1,0 +1,23 @@
+.container{
+    box-sizing:border-box;
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .formulario{
+        width: 50vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content:center;
+
+        input{
+            // width: 55%;
+            height: 6%;
+            margin-bottom: 5%;
+            
+        }
+    }
+}

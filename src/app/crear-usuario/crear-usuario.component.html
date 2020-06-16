@@ -1,10 +1,10 @@
-<div>
-    <form  #form="ngForm">
-        <input type="text"  [(ngModel)]="usuario.nombre" [ngModelOptions]="{standalone: true}"/>
-        <input  [(ngModel)]="usuario.apellido" [ngModelOptions]="{standalone: true}" />
-        <input  [(ngModel)]="usuario.telefono" [ngModelOptions]="{standalone: true}" />
-        <input  [(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}" />
-    
+<div class="container">
+    <form class="formulario" #form="ngForm">
+        <input placeholder="Nombre" type="text"  [(ngModel)]="usuario.nombre" [ngModelOptions]="{standalone: true}"/>
+        <input placeholder="Apellido" [(ngModel)]="usuario.apellido" [ngModelOptions]="{standalone: true}" />
+        <input placeholder="Telefono" [(ngModel)]="usuario.telefono" [ngModelOptions]="{standalone: true}" />
+        <input placeholder="Correo" type="email"  [(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}" />
+       
          <button (click)="crearUsuario()">Crear</button>
         
     </form>
