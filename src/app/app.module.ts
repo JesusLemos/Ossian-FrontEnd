@@ -6,10 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AgendaPrincipalComponent } from './agenda-principal/agenda-principal.component';
-import {MatIconModule} from '@angular/material/icon';
 import { HeaderComponent } from './header/header.component';
 import { DetalleusuarioComponent } from './detalleusuario/detalleusuario.component';
+import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
+import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -18,7 +20,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AppComponent,
     AgendaPrincipalComponent,
     HeaderComponent,
-    DetalleusuarioComponent
+    DetalleusuarioComponent,
+    CrearUsuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     HttpClientModule,
     MatIconModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
