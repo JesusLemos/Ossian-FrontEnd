@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AgendaService } from '../servicios/agenda.service';
-import {MatIconModule} from '@angular/material/icon';
+
 
 
 @Component({
@@ -14,7 +14,7 @@ export class AgendaPrincipalComponent implements OnInit {
  public todosContactos = [];
 
 
-  constructor(private agenda:AgendaService) { }
+  constructor(private agenda: AgendaService) { }
 
   obtenerTodos(){
     this.agenda.obtenerTodos().subscribe(usuario => JSON.parse(this.todosContactos = usuario));

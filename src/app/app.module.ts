@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AgendaPrincipalComponent } from './agenda-principal/agenda-principal.component';
 import {MatIconModule} from '@angular/material/icon';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AgendaPrincipalComponent
+    AgendaPrincipalComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
