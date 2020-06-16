@@ -5,8 +5,9 @@
         <input placeholder="Telefono" [(ngModel)]="usuario.telefono" [ngModelOptions]="{standalone: true}" />
         <input placeholder="Correo" type="email"  [(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}" />
        
-         <button (click)="crearUsuario()">Crear</button>
+         <button mat-raised-button color="primary"(click)="crearUsuario()">Crear</button>
         
     </form>
 
 </div>
+<!-- <button mat-raised-button color="primary">Primary</button> -->

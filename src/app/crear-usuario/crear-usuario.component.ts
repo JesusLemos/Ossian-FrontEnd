@@ -29,7 +29,11 @@ export class CrearUsuarioComponent implements OnInit {
 
   crearUsuario(){
     console.log(this.usuario)
-    this.agendaService.crearUsuario(this.usuario).subscribe(usuario => console.log(usuario)
+    this.agendaService.crearUsuario(this.usuario).subscribe(usuario => {
+      console.log(usuario)
+      this.router.navigate(['/contactos'])
+    
+    }
     )
   }
 }
