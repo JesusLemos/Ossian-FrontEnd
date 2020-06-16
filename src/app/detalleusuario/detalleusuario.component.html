@@ -1,13 +1,16 @@
-<div>
-    <form  #form="ngForm">
+<div class="container">
+    <form  class="formulario" #form="ngForm">
         <input type="text" value='{{ usuario.nombre }}' [(ngModel)]="usuario.nombre" [ngModelOptions]="{standalone: true}"/>
         <input value='{{ usuario.apellido }}' [(ngModel)]="usuario.apellido" [ngModelOptions]="{standalone: true}" />
         <input value='{{ usuario.telefono }}'  [(ngModel)]="usuario.telefono" [ngModelOptions]="{standalone: true}" />
         <input value='{{ usuario.correo }}' [(ngModel)]="usuario.correo" [ngModelOptions]="{standalone: true}" />
-    
-        <button (click)="actualizarUsuario()">Actualizar</button>
+        <div class="cajaBoton">
+            <button mat-raised-button  color="primary" (click)="actualizarUsuario()">Actualizar</button>
+
+            <button mat-raised-button color="warn" (click)="eliminarUsuario()">Eliminar</button>
+        </div>
         
-        <button (click)="eliminarUsuario()">Eliminar</button>
     </form>
 
 </div>
+

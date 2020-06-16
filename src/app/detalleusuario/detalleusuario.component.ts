@@ -31,7 +31,8 @@ export class DetalleusuarioComponent implements OnInit {
   }
   actualizarUsuario(){
     console.log('funcion' , this.usuario)
-    this.agendaService.actualizarUsuario(this.usuario , this.usuario.id).subscribe(usuario => console.log(usuario))
+    this.agendaService.actualizarUsuario(this.usuario , this.usuario.id).subscribe(usuario => console.log(usuario));
+    this.router.navigate(['/contactos'])
   }
   eliminarUsuario(){
     console.log('se borro');
