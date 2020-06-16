@@ -17,6 +17,9 @@ export class AgendaService {
   }
   actualizarUsuario(usuario , id){
     console.log(usuario , id);
-    return this.http.patch('http://localhost:3000/agenda/update/'+id, usuario)
+    return this.http.patch('http://localhost:3000/agenda/actualizar/'+id, usuario);
+  } 
+  eliminarUsuario(id){
+    return this.http.delete('http://localhost:3000/agenda/eliminar/'+id);
   }
 }

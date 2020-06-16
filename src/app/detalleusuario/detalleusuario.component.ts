@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { AgendaService } from '../servicios/agenda.service';
 import { Agenda } from '../agenda.model';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-detalleusuario',
   templateUrl: './detalleusuario.component.html',
@@ -17,7 +18,8 @@ export class DetalleusuarioComponent implements OnInit {
   };
   constructor(
     private route: ActivatedRoute,
-    private agendaService: AgendaService
+    private agendaService: AgendaService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -32,7 +34,12 @@ export class DetalleusuarioComponent implements OnInit {
     this.agendaService.actualizarUsuario(this.usuario , this.usuario.id).subscribe(usuario => console.log(usuario))
   }
   eliminarUsuario(){
-    
+    console.log('se borro');
+    this.agendaService.eliminarUsuario(this.usuario.id).subscribe(usuario =>{
+      console.log(usuario);
+      this.router.navigate(['/contactos'])
+
+    })
   }
 
 }
